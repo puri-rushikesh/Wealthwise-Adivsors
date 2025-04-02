@@ -1,0 +1,108 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff; /* White */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 60px; /* Increased height for larger logo */
+}
+
+.nav {
+  display: flex;
+  align-items: center; /* Ensure all nav items are aligned */
+  gap: 20px;
+}
+
+.nav a, .dropbtn {
+  color: #001f3f; /* Navy Blue */
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav a:hover, .dropbtn:hover {
+  background-color: #ff851b; /* Orange */
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position dropdown below the button */
+  margin-top: 10px; /* Add some space between the button and the dropdown */
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none; /* Prevent interaction when not visible */
+}
+
+.dropdown-column {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+  white-space: nowrap; /* Prevent text from breaking into multiple lines */
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto; /* Allow interaction when visible */
+}
+
+.login-button {
+  background-color: #ff851b; /* Orange */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #ff7700; /* Darker Orange */
+}
+
+.arrow {
+  font-size: 16px;
+}
